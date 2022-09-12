@@ -1,0 +1,50 @@
+.home-box{
+    margin-top: 5rem;
+    width:100%;
+}
+.todo-input{
+    font-size: 1rem;
+    padding: .5rem 1rem;
+    flex-basis: 60%;
+}
+
+.todos-box{
+    display: flex;
+    gap: 5rem;
+    justify-content: center;
+    align-items: flex-start;
+    width: 100%;
+}
+
+.todo{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width:100%;
+    margin: 1rem;
+    box-shadow: 0 .5px 3px 0 gray;
+    padding: .5rem;
+}
+
+.todo label{
+    flex-basis: 80%;
+}
+
+.backlog-pile, .done-pile{
+    width: 30%;
+    text-align: left;
+}
+
+.fa-arrow-right{
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+.input-box{
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin: auto;
+    width: 40%;
+    justify-content: center;
+}

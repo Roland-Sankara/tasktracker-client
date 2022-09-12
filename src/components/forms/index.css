@@ -1,0 +1,41 @@
+.form-container{
+    margin-top: 5rem;
+}
+
+form{
+    width: 40%;
+    margin: auto;
+    text-align: left;
+}
+
+.form-group{
+    display: flex;
+    flex-direction: column;
+    margin: 1rem 3rem;
+}
+
+.form-submit{
+    display: flex;
+    justify-content: space-between;
+    margin: 1rem 3rem;
+}
+
+.remember{
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+}
+
+.remember input{
+    font-size: 3rem;
+}
+
+input{
+    margin: .5rem 0rem;
+    padding: .5rem;
+    font-family: inherit;
+}
+
+.form-error{
+    color: tomato;
+}
