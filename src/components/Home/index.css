@@ -3,9 +3,12 @@
     width:100%;
 }
 .todo-input{
-    font-size: 1rem;
-    padding: .5rem 1rem;
+    font-size: 1.5rem;
+    padding: .8rem 1rem;
     flex-basis: 60%;
+    border: none;
+    border-bottom: 2px solid black;
+    outline: none;
 }
 
 .todos-box{
@@ -14,6 +17,9 @@
     justify-content: center;
     align-items: flex-start;
     width: 100%;
+    background-color: rgb(255, 167, 5);
+    height: 100vh;
+    flex-wrap: wrap;
 }
 
 .todo{
@@ -24,15 +30,19 @@
     margin: 1rem;
     box-shadow: 0 .5px 3px 0 gray;
     padding: .5rem;
+    background-color: white;
 }
 
 .todo label{
     flex-basis: 80%;
+    font-weight: 380;
+    font-size: 1.2rem;
 }
 
 .backlog-pile, .done-pile{
     width: 30%;
     text-align: left;
+    margin-top: 2rem;
 }
 
 .fa-arrow-right{
@@ -44,7 +54,22 @@
     display: flex;
     align-items: center;
     gap: 1rem;
-    margin: auto;
+    margin: 2rem auto 3rem auto;
     width: 40%;
     justify-content: center;
+}
+
+.todo input, .fa-xmark{
+    cursor: pointer;
+}
+
+.count {
+    padding: .5rem .5rem 0rem 1rem;
+    border-radius: 8px;
+    background-color: rgb(2, 41, 41);
+    color: white;
+}
+
+.todo-title{
+    font-weight: 800;
 }

@@ -58,11 +58,11 @@ const Home = () => {
   return (
     <div className="home-box">
       <h1 className="todo-title">
-        <em>{user ? user.username.toUpperCase() + "'s: To-Do-List" : null}</em>
+        <em>{user ? user.username.toUpperCase() + "'s 🚀 To-Do-List" : null}</em>
       </h1>
 
       <div className="input-box">
-        <input className="todo-input" type={"text"} placeholder="+ Add task" onChange={handleInputValue} value={task}/>
+        <input className="todo-input" type={"text"} placeholder="➕ Add task" onChange={handleInputValue} value={task}/>
         <i className="fa-solid fa-arrow-right" onClick={addTask}></i>
       </div>
 
@@ -70,7 +70,7 @@ const Home = () => {
         {backlog.length ? (
           <div className="backlog-pile">
             <h3>
-              <i className="fa-solid fa-angle-down"></i> Todos
+              <i className="fa-solid fa-angle-down"></i> Todos <em className="count">{backlog.filter((task)=>!task.isComplete).length}</em>
             </h3>
             {backlog.map((task, id)=>(!task.isComplete && <Todo key={id} text={task.text} done={task.isComplete} remove={()=>deleteTask(id)} handler={()=>commitToDonePile(id)}/>))}
           </div>
@@ -79,7 +79,7 @@ const Home = () => {
         {backlog.length ? (
           <div className="done-pile">
             <h3>
-              <i className="fa-solid fa-angle-down"></i> Done
+              <i className="fa-solid fa-angle-down"></i> Done <em className="count">{donePile.length}</em>
             </h3>
             {backlog.map((task, id)=>(task.isComplete&& <Todo key={id} text={task.text} done={task.isComplete} remove={()=>deleteTask(id)} handler={()=>commitToBacklog(id)}/>))}
           </div>
